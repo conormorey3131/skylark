@@ -236,6 +236,8 @@ body.menu-open .mobile-menu__links a:nth-child(5){transition-delay:.43s}
 .footer__social a:hover{background:var(--brass);border-color:var(--brass);transform:translateY(-3px)}
 .footer__social .ico{width:18px;height:18px;color:var(--sand-100)}
 .footer__bottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:.5rem;margin-top:3rem;padding-top:1.5rem;border-top:1px solid rgba(243,237,226,.12);font-size:.82rem;color:rgba(243,237,226,.5)}
+.footer__credit a{color:rgba(243,237,226,.72);font-weight:600;transition:color .3s}
+.footer__credit a:hover{color:var(--brass-light)}
 
 /* ---------- Mobile sticky bar ---------- */
 .mobilebar{position:fixed;left:0;right:0;bottom:0;z-index:50;display:flex;gap:.5rem;padding:.55rem .6rem calc(.55rem + env(safe-area-inset-bottom));background:rgba(250,247,241,.92);backdrop-filter:blur(14px);box-shadow:0 -2px 20px rgba(28,38,32,.12);transform:translateY(120%);transition:transform .5s var(--ease)}
