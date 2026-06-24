@@ -1,0 +1,13 @@
+# macOS
+.DS_Store
+
+# Original photo shoot (large source files — not deployed)
+/1c865405-59bb-00e9-7d06-0e1b7895d1f6-ZIP/
+/1c865405-59bb-00e9-7d06-0e1b7895d1f6-ZIP.zip
+/logo.PNG
+
+# Node / tooling
+node_modules/
+package.json
+package-lock.json
+*.mjs
