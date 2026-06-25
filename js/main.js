@@ -150,67 +150,82 @@ const GALLERY = [
 ];
 
 const grid = document.getElementById("galleryGrid");
-GALLERY.forEach((g,i)=>{
-  const fig = document.createElement("figure");
-  fig.className = "gallery__item reveal" + (g.tall ? " gallery__item--tall" : "");
-  fig.dataset.index = i;
-  fig.innerHTML = `<img src="assets/img/${g.src}.jpg" alt="${g.alt}" loading="lazy">`;
-  fig.addEventListener("click", ()=>openLightbox(i));
-  grid.appendChild(fig);
-  io.observe(fig);
-});
+const lb   = document.getElementById("lightbox");
 
-const lb       = document.getElementById("lightbox");
-const lbImg    = lb.querySelector(".lightbox__img");
-const lbCap    = lb.querySelector(".lightbox__caption");
-let lbIndex    = 0;
+if (grid && lb) {
+  GALLERY.forEach((g,i)=>{
+    const fig = document.createElement("figure");
+    fig.className = "gallery__item reveal" + (g.tall ? " gallery__item--tall" : "");
+    fig.dataset.index = i;
+    fig.innerHTML = `<img src="assets/img/${g.src}.jpg" alt="${g.alt}" loading="lazy">`;
+    fig.addEventListener("click", ()=>openLightbox(i));
+    grid.appendChild(fig);
+    io.observe(fig);
+  });
 
-function openLightbox(i){
-  lbIndex = i;
-  render();
-  lb.classList.add("open");
-  lb.setAttribute("aria-hidden","false");
-  document.body.style.overflow = "hidden";
-}
-function render(){
-  const g = GALLERY[lbIndex];
-  lbImg.src = `assets/img/${g.src}.jpg`;
-  lbImg.alt = g.alt;
-  lbCap.textContent = `${g.alt}  ·  ${lbIndex+1} / ${GALLERY.length}`;
-}
-function close(){
-  lb.classList.remove("open");
-  lb.setAttribute("aria-hidden","true");
-  document.body.style.overflow = "";
-}
-function move(dir){
-  lbIndex = (lbIndex + dir + GALLERY.length) % GALLERY.length;
-  lbImg.style.opacity = 0;
-  setTimeout(()=>{ render(); lbImg.style.opacity = 1; }, 120);
-}
-lb.querySelector(".lightbox__close").addEventListener("click", close);
-lb.querySelector(".lightbox__nav--prev").addEventListener("click", ()=>move(-1));
-lb.querySelector(".lightbox__nav--next").addEventListener("click", ()=>move(1));
-lb.addEventListener("click", e=>{ if(e.target===lb) close(); });
-document.addEventListener("keydown", e=>{
-  if(!lb.classList.contains("open")) return;
-  if(e.key==="Escape") close();
-  if(e.key==="ArrowLeft") move(-1);
-  if(e.key==="ArrowRight") move(1);
-});
-lbImg.style.transition = "opacity .12s ease";
+  const lbImg = lb.querySelector(".lightbox__img");
+  const lbCap = lb.querySelector(".lightbox__caption");
+  let lbIndex = 0;
 
-/* swipe on touch */
-let touchX = null;
-lb.addEventListener("touchstart", e=>touchX = e.touches[0].clientX, {passive:true});
-lb.addEventListener("touchend", e=>{
-  if(touchX===null) return;
-  const dx = e.changedTouches[0].clientX - touchX;
-  if(Math.abs(dx)>50) move(dx<0 ? 1 : -1);
-  touchX = null;
-},{passive:true});
+  window.openLightbox = function(i){
+    lbIndex = i; render();
+    lb.classList.add("open");
+    lb.setAttribute("aria-hidden","false");
+    document.body.style.overflow = "hidden";
+  };
+  function render(){
+    const g = GALLERY[lbIndex];
+    lbImg.src = `assets/img/${g.src}.jpg`;
+    lbImg.alt = g.alt;
+    lbCap.textContent = `${g.alt}  ·  ${lbIndex+1} / ${GALLERY.length}`;
+  }
+  function close(){
+    lb.classList.remove("open");
+    lb.setAttribute("aria-hidden","true");
+    document.body.style.overflow = "";
+  }
+  function move(dir){
+    lbIndex = (lbIndex + dir + GALLERY.length) % GALLERY.length;
+    lbImg.style.opacity = 0;
+    setTimeout(()=>{ render(); lbImg.style.opacity = 1; }, 120);
+  }
+  var openLightbox = window.openLightbox;
+  lb.querySelector(".lightbox__close").addEventListener("click", close);
+  lb.querySelector(".lightbox__nav--prev").addEventListener("click", ()=>move(-1));
+  lb.querySelector(".lightbox__nav--next").addEventListener("click", ()=>move(1));
+  lb.addEventListener("click", e=>{ if(e.target===lb) close(); });
+  document.addEventListener("keydown", e=>{
+    if(!lb.classList.contains("open")) return;
+    if(e.key==="Escape") close();
+    if(e.key==="ArrowLeft") move(-1);
+    if(e.key==="ArrowRight") move(1);
+  });
+  lbImg.style.transition = "opacity .12s ease";
+
+  let touchX = null;
+  lb.addEventListener("touchstart", e=>touchX = e.touches[0].clientX, {passive:true});
+  lb.addEventListener("touchend", e=>{
+    if(touchX===null) return;
+    const dx = e.changedTouches[0].clientX - touchX;
+    if(Math.abs(dx)>50) move(dx<0 ? 1 : -1);
+    touchX = null;
+  },{passive:true});
+}
 
 /* -------------------------------------------------------------------
-   8.  YEAR
+   8.  FAQ ACCORDION
 ------------------------------------------------------------------- */
-document.getElementById("year").textContent = new Date().getFullYear();
+document.querySelectorAll(".faq__item").forEach(item=>{
+  const q = item.querySelector(".faq__q");
+  const a = item.querySelector(".faq__a");
+  q.addEventListener("click", ()=>{
+    const open = item.classList.toggle("open");
+    a.style.maxHeight = open ? a.scrollHeight + "px" : null;
+  });
+});
+
+/* -------------------------------------------------------------------
+   9.  YEAR
+------------------------------------------------------------------- */
+const yearEl = document.getElementById("year");
+if (yearEl) yearEl.textContent = new Date().getFullYear();

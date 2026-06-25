@@ -3,17 +3,28 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <title>Skylark Lodge — Luxury Accommodation near Oranmore, County Galway</title>
-  <meta name="description" content="Skylark Lodge is a premium stone-clad retreat in Glennascaul, County Galway, near Oranmore and Galway city. Spacious open-plan living, ensuite marble bathrooms and serene gardens. Book direct with Breda." />
+  <title>Skylark Lodge | Luxury Self-Catering Accommodation near Galway City</title>
+  <meta name="description" content="Skylark Lodge is a luxury self-catering holiday home near Galway city, in Oranmore, Co. Galway. 4 ensuite bedrooms, open-plan living and private gardens — just 15 minutes from the city. Book direct with Breda." />
+  <meta name="keywords" content="accommodation near Galway city, self catering Galway, holiday home Oranmore, places to stay Galway, luxury accommodation County Galway, Wild Atlantic Way accommodation" />
   <meta name="theme-color" content="#1c2620" />
+  <meta name="robots" content="index, follow" />
+  <meta name="geo.region" content="IE-G" />
+  <meta name="geo.placename" content="Oranmore, County Galway" />
+  <meta name="geo.position" content="53.2925;-8.9217" />
   <link rel="canonical" href="https://skylarklodge.ie/" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Skylark Lodge" />
+  <meta property="og:locale" content="en_IE" />
   <meta property="og:url" content="https://skylarklodge.ie/" />
-  <meta property="og:title" content="Skylark Lodge — A Luxury Countryside Retreat" />
-  <meta property="og:description" content="A premium stone-clad retreat in the heart of the Irish countryside. Book direct with Breda." />
-  <meta property="og:image" content="assets/img/og-image.jpg" />
+  <meta property="og:title" content="Skylark Lodge | Luxury Self-Catering near Galway City" />
+  <meta property="og:description" content="A luxury holiday home near Galway city — 4 ensuite bedrooms, open-plan living and private gardens in Oranmore, Co. Galway. Book direct with Breda." />
+  <meta property="og:image" content="https://skylarklodge.ie/assets/img/og-image.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Skylark Lodge | Luxury Self-Catering near Galway City" />
+  <meta name="twitter:description" content="A luxury holiday home near Galway city, in Oranmore, Co. Galway. Book direct with Breda." />
+  <meta name="twitter:image" content="https://skylarklodge.ie/assets/img/og-image.jpg" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -21,6 +32,59 @@
   <link rel="stylesheet" href="css/style.css" />
   <link rel="icon" type="image/png" href="assets/img/logo-icon.png" />
   <link rel="apple-touch-icon" href="assets/img/logo-icon.png" />
+
+  <!-- Structured data: LodgingBusiness -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LodgingBusiness",
+    "@id": "https://skylarklodge.ie/#lodge",
+    "name": "Skylark Lodge",
+    "description": "Luxury self-catering holiday home near Galway city, in Oranmore, County Galway. Four ensuite bedrooms, open-plan living and private landscaped gardens.",
+    "url": "https://skylarklodge.ie/",
+    "logo": "https://skylarklodge.ie/assets/img/logo.png",
+    "image": [
+      "https://skylarklodge.ie/assets/img/hero-exterior-twilight@2x.jpg",
+      "https://skylarklodge.ie/assets/img/kitchen.jpg",
+      "https://skylarklodge.ie/assets/img/openplan-2.jpg"
+    ],
+    "telephone": "+353876279097",
+    "priceRange": "€€",
+    "currenciesAccepted": "EUR",
+    "petsAllowed": false,
+    "numberOfRooms": 4,
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Glennascaul Business Park",
+      "addressLocality": "Oranmore",
+      "addressRegion": "County Galway",
+      "addressCountry": "IE"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 53.2925,
+      "longitude": -8.9217
+    },
+    "hasMap": "https://maps.google.com/maps?q=73PC%2BPQ%20Glennascaul%20Business%20Park%2C%20County%20Galway",
+    "areaServed": [
+      { "@type": "City", "name": "Galway" },
+      { "@type": "Place", "name": "Oranmore" },
+      { "@type": "AdministrativeArea", "name": "County Galway" }
+    ],
+    "amenityFeature": [
+      { "@type": "LocationFeatureSpecification", "name": "Free WiFi", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Free parking", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Ensuite bathrooms", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Fully equipped kitchen", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Private garden", "value": true }
+    ],
+    "sameAs": [
+      "https://www.instagram.com/skylarklodge/",
+      "https://www.facebook.com/profile.php?id=61590315734183",
+      "https://www.tiktok.com/@skylarklodge"
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -33,13 +97,14 @@
       </a>
 
       <nav class="nav__links" aria-label="Primary">
-        <a href="#about">The Lodge</a>
-        <a href="#space">The Space</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#location">Location</a>
+        <a href="the-lodge.html">The Lodge</a>
+        <a href="accommodation.html">Accommodation</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="galway.html">Galway &amp; Area</a>
+        <a href="contact.html">Contact</a>
       </nav>
 
-      <a class="btn btn--nav js-call" href="#contact">
+      <a class="btn btn--nav" href="contact.html">
         <svg viewBox="0 0 24 24" aria-hidden="true" class="ico"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.2.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.3 1z" fill="currentColor"/></svg>
         Book Now
       </a>
@@ -53,11 +118,12 @@
   <!-- ====== MOBILE MENU ====== -->
   <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
     <nav class="mobile-menu__links">
-      <a href="#about">The Lodge</a>
-      <a href="#space">The Space</a>
-      <a href="#gallery">Gallery</a>
-      <a href="#location">Location</a>
-      <a href="#contact">Contact</a>
+      <a href="index.html">Home</a>
+      <a href="the-lodge.html">The Lodge</a>
+      <a href="accommodation.html">Accommodation</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="galway.html">Galway &amp; Area</a>
+      <a href="contact.html">Contact</a>
     </nav>
     <div class="mobile-menu__cta">
       <a class="btn btn--solid js-call-link" href="#">Call Breda</a>
@@ -257,6 +323,7 @@
       <div class="section-head reveal">
         <p class="eyebrow">A closer look</p>
         <h2 class="h2">Gallery</h2>
+        <p style="margin-top:1rem"><a href="gallery.html" style="color:var(--brass);font-weight:600;border-bottom:1px solid var(--brass);padding-bottom:2px">View the full gallery →</a></p>
       </div>
     </div>
     <div class="gallery__grid" id="galleryGrid">
@@ -281,6 +348,7 @@
           <li><strong>Private parking</strong> within the gated grounds</li>
         </ul>
         <p class="location__note">Exact directions and local tips are shared by Breda when you book — just call or message to plan your stay.</p>
+        <a class="btn btn--solid" href="galway.html" style="margin-top:1.5rem">Explore Galway &amp; the area</a>
       </div>
     </div>
 
@@ -331,10 +399,11 @@
 
       <div class="footer__col">
         <h4>Explore</h4>
-        <a href="#about">The Lodge</a>
-        <a href="#space">The Space</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#location">Location</a>
+        <a href="the-lodge.html">The Lodge</a>
+        <a href="accommodation.html">Accommodation</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="galway.html">Galway &amp; Area</a>
+        <a href="contact.html">Contact</a>
       </div>
 
       <div class="footer__col">
