@@ -131,22 +131,24 @@ parallax();
    7.  GALLERY  +  LIGHTBOX
 ------------------------------------------------------------------- */
 const GALLERY = [
-  {src:"openplan-1",     alt:"Open-plan living and dining filled with light",        tall:true},
-  {src:"bedroom-grey",   alt:"Calm grey bedroom with reading armchair"},
-  {src:"kitchen",        alt:"Sage-green island kitchen with brass pendants"},
-  {src:"bath-grey",      alt:"Grey marble bathroom with walk-in rainfall shower",    tall:true},
-  {src:"bedroom-navy",   alt:"Navy upholstered bed with countryside view"},
-  {src:"entrance-hall",  alt:"Bright entrance hall with crystal chandelier"},
-  {src:"bedroom-beige",  alt:"Neutral bedroom with ensuite"},
-  {src:"hallway",        alt:"Hallway gallery wall with artwork",                    tall:true},
-  {src:"bath-marble-gold",alt:"Marble bathroom with gold-framed mirror"},
-  {src:"bedroom-twin",   alt:"Flexible twin bedroom"},
-  {src:"living-room",    alt:"Living room with leather sofa and smart TV"},
-  {src:"entrance-door",  alt:"Front door framed by potted flowers"},
-  {src:"exterior-gates", alt:"Gated entrance with sweeping driveway",                tall:true},
+  {src:"hero-exterior-twilight", alt:"The Lodge — stone guest house glowing at twilight in Oranmore", tall:true},
+  {src:"entrance-hall",  alt:"The Lodge — bright entrance hall with chandelier"},
+  {src:"kitchen",        alt:"The Lodge — island kitchen and guest lounge"},
+  {src:"bath-marble-gold",alt:"The Lodge — marble bathroom with gold-framed mirror", tall:true},
+  {src:"bedroom-navy",   alt:"The Lodge — navy ensuite bedroom"},
+  {src:"openplan-2",     alt:"The Lodge — open-plan living opening to the countryside"},
+  {src:"bedroom-twin",   alt:"The Lodge — twin guest room"},
+  {src:"bath-grey",      alt:"The Lodge — grey marble walk-in shower",               tall:true},
+  {src:"nest-exterior",  alt:"The Nest — white cottage apartment with garden"},
+  {src:"nest-living",    alt:"The Nest — open-plan living with stairs to bedrooms"},
+  {src:"nest-kitchen",   alt:"The Nest — fully equipped kitchen with garden view",   tall:true},
+  {src:"nest-bed1",      alt:"The Nest — restful bedroom in blush tones"},
+  {src:"nest-bath",      alt:"The Nest — marble bathroom"},
+  {src:"nest-patio",     alt:"The Nest — private patio with pergola and seating",     tall:true},
+  {src:"nest-bed2",      alt:"The Nest — bright double bedroom"},
   {src:"garden",         alt:"Landscaped gardens and open countryside"},
-  {src:"exterior-rear",  alt:"Rear of the lodge across the lawn"},
-  {src:"patio",          alt:"Sunny patio with outdoor seating"}
+  {src:"exterior-gates", alt:"Gated entrance to the Skylark Lodge grounds"},
+  {src:"nest-living2",   alt:"The Nest — living room with leather sofa"}
 ];
 
 const grid = document.getElementById("galleryGrid");
