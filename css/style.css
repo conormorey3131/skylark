@@ -25,6 +25,7 @@
   --container:1240px;
   --pad:clamp(20px,5vw,40px);
   --r:14px;
+  --banner-h:42px;
   --ease:cubic-bezier(.22,1,.36,1);
   --shadow:0 30px 60px -28px rgba(28,38,32,.4);
 }
@@ -75,8 +76,12 @@ em{font-style:italic;color:var(--brass)}
 .btn--nav{background:var(--brass);color:#fff;padding:.62rem 1.2rem;font-size:.86rem}
 .btn--nav:hover{background:var(--brass-light);transform:translateY(-2px)}
 
+/* ---------- Announcement banner ---------- */
+.announce{position:fixed;top:0;left:0;right:0;z-index:70;background:var(--forest);color:var(--sand-50);text-align:center;font-family:var(--sans);font-size:clamp(.72rem,2.6vw,.85rem);font-weight:600;letter-spacing:.01em;line-height:1.35;padding:.55rem 1rem}
+.announce strong{color:var(--brass-light);font-weight:700;white-space:nowrap}
+
 /* ---------- Nav ---------- */
-.nav{position:fixed;inset:0 0 auto 0;z-index:60;transition:background .4s,box-shadow .4s,padding .4s;padding:.5rem 0}
+.nav{position:fixed;inset:var(--banner-h,0) 0 auto 0;z-index:60;transition:background .4s,box-shadow .4s,padding .4s;padding:.5rem 0}
 .nav__inner{max-width:var(--container);margin-inline:auto;padding-inline:var(--pad);display:flex;align-items:center;gap:1.5rem;height:64px}
 .nav.scrolled{background:rgba(250,247,241,.86);backdrop-filter:blur(14px);box-shadow:0 1px 0 rgba(28,38,32,.06)}
 .nav.hide{transform:translateY(-100%)}
