@@ -45,7 +45,7 @@ site/
 
 ## Map location
 
-The map in the **Location** section is a keyless Google Maps embed in `index.html`, set to **73PC+PQ Glennascaul Business Park, County Galway**. To change it, edit the `q=` value in the iframe `src` (an address or `latitude,longitude` both work).
+The map in the **Location** section is a keyless Google Maps embed in `index.html`, set to Eircode **H91 5A03** (Glennascaul, Oranmore). To change it, edit the `q=` value in the iframe `src` (an address or `latitude,longitude` both work).
 
 ## Logo & favicon
 
